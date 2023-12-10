@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Opacity Transition on Hover</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    /* Image container styles */
+    .image-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    /* Image styles */
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Hover effect styles */
+    .image-container:hover img {
+      opacity: 0.5;
+    }
+
+    .image-container:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Caption styles */
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover .caption {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="lord.jpg" alt="Placeholder Image">
+    <div class="caption">Welcome to WAD lab</div>
+  </div>
+</body>
+</html>

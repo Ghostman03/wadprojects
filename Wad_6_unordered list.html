@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Routine</title>
+  <style>
+    body.dark-theme {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1f1f1f;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      background-color: #333;
+    }
+
+    .title {
+      color: #eee;
+    }
+
+    .input-field {
+      padding: 8px;
+      margin: 8px;
+      border: 1px solid #ccc;
+      background-color: #444;
+      color: #fff;
+    }
+
+    .add-btn {
+      padding: 8px 16px;
+      margin: 8px;
+      border: none;
+      background-color: #555;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .task-list {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .task-list li {
+      margin-bottom: 10px;
+      background-color: #222;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+
+<div class="container">
+  <h1 class="title">Daily Routine</h1>
+
+  <input type="text" id="taskInput" placeholder="Enter a task" class="input-field">
+  <button onclick="
+    var taskInput = document.getElementById('taskInput');
+    var taskList = document.getElementById('taskList');
+
+    var taskText = taskInput.value;
+    if (taskText.trim() !== '') {
+      var listItem = document.createElement('li');
+      listItem.textContent = taskText;
+
+      taskList.appendChild(listItem);
+      taskInput.value = '';
+    } else {
+      alert('Please enter a task!');
+    }
+  " class="add-btn">Add Task</button>
+
+  <ul id="taskList" class="task-list">
+    <!-- Existing list items will go here -->
+  </ul>
+</div>
+
+</body>
+</html>

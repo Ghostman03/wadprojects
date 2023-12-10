@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Animation Example</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .heading {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .container:hover .image {
+    transform: scale(1);
+  }
+  
+  .container:hover .text {
+    opacity: 1;
+  }
+  
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="heading">Welcome to My Page</h1>
+
+  <div class="content">
+    <img src="capyboss.jpg" alt="Placeholder Image" class="image">
+    <p class="text">Hello my name is Capyboss and I am here to do WAD lab</p>
+    <p class="text">I hope i get good marks!!</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Alert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Button Click Example</h1>
+
+  <button id="clickMeButton">Click Me</button>
+
+  <script>
+    // JavaScript code
+    document.getElementById('clickMeButton').addEventListener('click', function() {
+      alert('Button Clicked! This is an example alert.');
+    });
+  </script>
+
+</body>
+</html>

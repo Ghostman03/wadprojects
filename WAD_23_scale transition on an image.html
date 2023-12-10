@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Scale Transition</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    /* Image container styles */
+    .image-container {
+      transition: transform 1s ease;
+    }
+
+    img {
+      display: block;
+      width: 300px;
+      height: auto;
+    }
+
+    /* Scale effect on click */
+    .image-container.clicked {
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container" onclick="toggleScale(this)">
+    <img src="kitten.png" alt="Placeholder Image">
+  </div>
+
+  <script>
+    function toggleScale(element) {
+      element.classList.toggle('clicked');
+    }
+  </script>
+</body>
+</html>

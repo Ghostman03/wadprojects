@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Navbar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        nav h1, nav a {
+            margin: 0;
+            padding: 15px;
+            color: #ecf0f1;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            background-color: #34495e;
+        }
+
+        nav .right-links {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav .right-links {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1><a href="https://www.example.com" target="_blank">Stylish Navbar</a></h1>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <div class="right-links">
+            <a href="#">Register</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+
+    <!-- Content goes here -->
+
+</body>
+</html>
